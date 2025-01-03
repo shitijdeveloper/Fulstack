@@ -35,6 +35,9 @@ app.use(session({
     maxAge: 60000, // 1 minute
   }
 }));
+app.get('/', (req, res) => {
+  res.send('Hello API');
+});
   app.get('/text', (req, res) => {
     if (req.session.test) {
       req.session.test++;
