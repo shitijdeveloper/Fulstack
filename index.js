@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static('public')); 
 
 // const dbHost = 'mongodb://localhost:27017/CRM';
-const dbHost = 'mongodb+srv://f1iMUf1iMUf1iMU:f1iMUf1iMUf1iMU@cluster0.f2jem.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/CRMM'
+const dbHost = 'mongodb+srv://shitijsharma707:a16qWREKlTYbvLYl@cluster0.qwcrf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test'
  mongoose.connect(dbHost, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
