@@ -26,26 +26,26 @@ const dbHost = 'mongodb+srv://shitijsharma707:a16qWREKlTYbvLYl@cluster0.qwcrf.mo
 });
 
 
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: {
-    secure: false, // Secure false for development; change to true in production with HTTPS
-    maxAge: 60000, // 1 minute
-  }
-}));
+// app.use(session({
+//   secret: 'keyboard cat',
+//   resave: false,
+//   saveUninitialized: true,
+//   cookie: {
+//     secure: false, // Secure false for development; change to true in production with HTTPS
+//     maxAge: 60000, // 1 minute
+//   }
+// }));
 app.get('/', (req, res) => {
   res.send('Hello API');
 });
-  app.get('/text', (req, res) => {
-    if (req.session.test) {
-      req.session.test++;
-    } else {
-      req.session.test = 1;
-    }
-    res.send(`Session count: ${req.session.test}`);
-  });
+  // app.get('/text', (req, res) => {
+  //   if (req.session.test) {
+  //     req.session.test++;
+  //   } else {
+  //     req.session.test = 1;
+  //   }
+  //   res.send(`Session count: ${req.session.test}`);
+  // });
   app.get('/lead',async(req,res)=>{
     try {
        const Reuslt= await Customer.find();
