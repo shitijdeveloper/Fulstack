@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static('public')); 
 
 // const dbHost = 'mongodb://localhost:27017/CRM';
-onst dbHost = 'mongodb+srv://shitijsharma707:a16qWREKlTYbvLYl@cluster0.qwcrf.mongodb.net/test?retryWrites=true&w=majority';
+const dbHost = 'mongodb+srv://shitijsharma707:a16qWREKlTYbvLYl@cluster0.qwcrf.mongodb.net/test?retryWrites=true&w=majority';
 
 mongoose.connect(dbHost, {
   serverSelectionTimeoutMS: 10000, // 10 seconds timeout for server selection
@@ -25,9 +25,6 @@ mongoose.connect(dbHost, {
 })
   .then(() => console.log("Connected to MongoDB successfully!"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
-mongoose.connection.on('error', (err) => {
-  console.error('Mongoose connection error:', err);
-});
 
 
 // app.use(session({
